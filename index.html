@@ -19,7 +19,7 @@
                 <input type="text" name="userName" required> <!--É o campo de entrada-->
                 <br>
                 <label for="userAge">Idade</label>
-                <input type="number" name="userAge" min="12" max="100" required>
+                <input type="number" name="userAge" min="12" max="100" required> <!--O "required" torna o campo obrigatório-->
                 <br>
                 <label for="birthDate">Data de nascimento</label>
                 <input type="date" name="birthDate">
@@ -38,6 +38,7 @@
             <fieldset>
                 <legend>Perfil</legend>
 
+                <!-- Gênero -->
                 <p>Gênero</p>
                 <input type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis. O "value" é para salvar o resultado-->
                 <label for="userGender">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro -->
@@ -47,6 +48,7 @@
                 <label for="userGender">Prefiro não informar</label> 
                 <br>
 
+                <!-- Estado Civil -->
                 <label for="maritalStatus">Estado Civil: </label>
                 <select name="maritalStatus" id=""> <!--Cria uma lista suspensa-->
                     <option value="notInformed">Selecione</option> <!--A tag "option" sempre é puxada pelo select-->
@@ -56,38 +58,40 @@
                     <option value="casado">União estável</option>
                 </select>
 
+                <!-- Estados -->
                 <label for="userState">Estado: </label>
-                <select name="userState" id="">
+                <select name="userState" required>
                     <option value="notInformed">Selecione</option>
-                    <option value="Acre">Acre</option>
-                    <option value="Alagoas">Alagoas</option>
-                    <option value="Amapá">Amapá</option>
-                    <option value="Amazonas">Amazonas</option>
-                    <option value="Bahia">Bahia</option>
-                    <option value="Ceará">Ceará</option>
-                    <option value="Distrito Federal">Distrito Federal</option>
-                    <option value="Espírito Santo">Espírito Santo</option>
-                    <option value="Goiás">Goiás</option>
-                    <option value="Maranhão">Maranhão</option>
-                    <option value="Mato Grosso">Mato Grosso</option>
-                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
-                    <option value="Minas Gerais">Minas Gerais</option>
-                    <option value="Pará">Pará</option>
-                    <option value="Paraíba">Paraíba</option>
-                    <option value="Paraná">Paraná</option>
-                    <option value="Pernambuco">Pernambuco</option>
-                    <option value="Piauí">Piauí</option>
-                    <option value="Rio de Janeiro">Rio de Janeiro</option>
-                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
-                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
-                    <option value="Rondônia">Rondônia</option>
-                    <option value="Roraima">Roraima</option>
-                    <option value="Santa Catarina">Santa Catarina</option>
-                    <option value="São Paulo">São Paulo</option>
-                    <option value="Sergipe">Sergipe</option>
-                    <option value="Tocantins">Tocantins</option>
+                    <option value="acre">Acre</option>
+                    <option value="alagoas">Alagoas</option>
+                    <option value="amapa">Amapá</option>
+                    <option value="amazonas">Amazonas</option>
+                    <option value="bahia">Bahia</option>
+                    <option value="ceara">Ceará</option>
+                    <option value="distritoFederal">Distrito Federal</option>
+                    <option value="espiritoSanto">Espírito Santo</option>
+                    <option value="goias">Goiás</option>
+                    <option value="maranhao">Maranhão</option>
+                    <option value="matoGrosso">Mato Grosso</option>
+                    <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                    <option value="minasGerais">Minas Gerais</option>
+                    <option value="para">Pará</option>
+                    <option value="paraiba">Paraíba</option>
+                    <option value="parana">Paraná</option>
+                    <option value="pernambuco">Pernambuco</option>
+                    <option value="piaui">Piauí</option>
+                    <option value="rioDeJaneiro">Rio de Janeiro</option>
+                    <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                    <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                    <option value="rondonia">Rondônia</option>
+                    <option value="roraima">Roraima</option>
+                    <option value="santaCatarina">Santa Catarina</option>
+                    <option value="saoPaulo">São Paulo</option>
+                    <option value="sergipe">Sergipe</option>
+                    <option value="tocantins">Tocantins</option>
                 </select>
 
+                <!-- Cidade -->
                 <label for="userCity">Cidade: </label> <!--É a etiqueta-->
                 <input type="text" name="userCity" required> <!--É o campo de entrada-->
             </fieldset>
