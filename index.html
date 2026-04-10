@@ -15,23 +15,23 @@
                 <!-- Dados pessoais do site-->
 
                 <legend>Dados pessoais</legend> <!-- É o título do grupo -->
-                <label for="userName">Nome</label> <!--É a etiqueta-->
-                <input type="text" name="userName" required> <!--É o campo de entrada-->
+                <label for="name">Nome</label> <!--É a etiqueta-->
+                <input id="name" type="text" name="userName" required> <!--É o campo de entrada-->
                 <br>
-                <label for="userAge">Idade</label>
-                <input type="number" name="userAge" min="12" max="100" required> <!--O "required" torna o campo obrigatório-->
+                <label for="age">Idade</label>
+                <input id="age" type="number" name="userAge" min="12" max="100" required> <!--O "required" torna o campo obrigatório-->
                 <br>
                 <label for="birthDate">Data de nascimento</label>
-                <input type="date" name="birthDate">
+                <input id="birthDate" type="date" name="userBirthDate">
                 <br>
-                <label for="userEmail">Email</label>
-                <input type="email" name="userEmail" required>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="userEmail" required>
                 <br>
-                <label for="userPhoneNumber">Número de celular</label>
-                <input type="tel" name="userPhoneNumber" pattern="[0-9] {11}" placeholder="(DDD)números">
+                <label for="phoneNumber">Número de celular</label>
+                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9] {11}" placeholder="(DDD)números">
                 <br>
-                <label for="userImage">Upload de fotos</label>
-                <input type="file" accept="image/*" name="userImage">
+                <label for="image">Upload de fotos</label>
+                <input id="image" type="file" accept="image/*" name="userImage">
                 <br>
             </fieldset>
 
@@ -40,17 +40,17 @@
 
                 <!-- Gênero -->
                 <p>Gênero</p>
-                <input type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis. O "value" é para salvar o resultado-->
-                <label for="userGender">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro -->
-                <input type="radio" name="userGender" value="Masculino">
-                <label for="userGender">Masculino</label> 
-                <input type="radio" name="userGender" value="notInformed">
-                <label for="userGender">Prefiro não informar</label> 
+                <input id="fem" type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis de escolha única. O "value" é para salvar o resultado-->
+                <label for="fem">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro -->
+                <input id="masc" type="radio" name="userGender" value="Masculino">
+                <label for="masc">Masculino</label> 
+                <input id="notInformed" type="radio" name="userGender" value="notInformed">
+                <label for="notInformed">Prefiro não informar</label> 
                 <br>
 
                 <!-- Estado Civil -->
-                <label for="maritalStatus">Estado Civil: </label>
-                <select name="maritalStatus" id=""> <!--Cria uma lista suspensa-->
+                <label for="maritalStatus">Estado Civil:</label>
+                <select name="userMaritalStatus" id="maritalStatus"> <!--Cria uma lista suspensa-->
                     <option value="notInformed">Selecione</option> <!--A tag "option" sempre é puxada pelo select-->
                     <option value="casado">Casado</option>
                     <option value="solteiro">Solteiro</option>
@@ -59,8 +59,8 @@
                 </select>
 
                 <!-- Estados -->
-                <label for="userState">Estado: </label>
-                <select name="userState" required>
+                <label for="state">Estado: </label>
+                <select id="state" name="userState" required>
                     <option value="notInformed">Selecione</option>
                     <option value="acre">Acre</option>
                     <option value="alagoas">Alagoas</option>
@@ -92,12 +92,38 @@
                 </select>
 
                 <!-- Cidade -->
-                <label for="userCity">Cidade: </label> <!--É a etiqueta-->
-                <input type="text" name="userCity" required> <!--É o campo de entrada-->
+                <label for="city">Cidade: </label> <!--É a etiqueta-->
+                <input id="city" name="userCity" required> <!--É o campo de entrada-->
             </fieldset>
 
+            <fieldset>
+                <legend>Hábitos</legend>
 
+                <!--Redes Sociais-->
+                <p>Redes Sociais</p>
+                <input id="Instagram" type="checkbox" name="socialMedia" value="instagram"> <!--O "checkbox" permite selecionar várias opções-->
+                <label for="Instagram">Instagram</label>
+                <br>  
+                <input id="Facebook" type="checkbox" name="socialMedia" value="facebook">
+                <label for="Facebook">Facebook</label>
+                <br>  
+                <input id="Linkedin" type="checkbox" name="socialMedia" value="linkedin">
+                <label for="Linkedin">Linkedin</label>
+                <br>  
+                <input id="X" type="checkbox" name="socialMedia" value="x">
+                <label for="X">X</label>
+                <br>
 
+                <!--Estilo de Música-->
+                <label for="musicStyle">Estilo musical:</label>
+                <input list="styleTypes" type="text" id="musicStyle" name="userMusicStyle">
+                <datalist id="styleTypes">
+                    <option value="Rock">
+                    <option value="Pop">
+                    <option value="Samba">
+                    <option value="Sertanejo">
+                </datalist>
+            </fieldset>
 
 
 
