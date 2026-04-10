@@ -49,7 +49,7 @@
                 <br>
 
                 <!-- Estado Civil -->
-                <label for="maritalStatus">Estado Civil: </label>
+                <label for="maritalStatus">Estado Civil:</label>
                 <select name="userMaritalStatus" id="maritalStatus"> <!--Cria uma lista suspensa-->
                     <option value="notInformed">Selecione</option> <!--A tag "option" sempre é puxada pelo select-->
                     <option value="casado">Casado</option>
@@ -112,6 +112,17 @@
                 <br>  
                 <input id="X" type="checkbox" name="socialMedia" value="x">
                 <label for="X">X</label>
+                <br>
+
+                <!--Estilo de Música-->
+                <label for="musicStyle">Estilo musical:</label>
+                <input list="styleTypes" type="text" id="musicStyle" name="userMusicStyle">
+                <datalist id="styleTypes">
+                    <option value="Rock">
+                    <option value="Pop">
+                    <option value="Samba">
+                    <option value="Sertanejo">
+                </datalist>
             </fieldset>
 
 
