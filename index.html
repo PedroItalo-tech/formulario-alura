@@ -10,13 +10,13 @@
         <h1>Pesquisa Online</h1>
     </header>
     <section>
-        <form action="" method="get"> <!--Indica que vai começar um formulário-->
-            <fieldset>
+        <form action="" method="get"> <!--O <fomr> indica que vai começar um formulário, o <action> define para onde os dados vão ser enviados ao clicar no botão e o <method> define como os dados vão ser enviados-->
+            <fieldset> <!--Cria um "grupo", define bordas -->
                 <!-- Dados pessoais do site-->
 
-                <legend>Dados pessoais</legend>
-                <label for="userName">Nome</label>
-                <input type="text" name="userName" required> 
+                <legend>Dados pessoais</legend> <!-- É o título do grupo -->
+                <label for="userName">Nome</label> <!--É a etiqueta-->
+                <input type="text" name="userName" required> <!--É o campo de entrada-->
                 <br>
                 <label for="userAge">Idade</label>
                 <input type="number" name="userAge" min="12" max="100" required>
@@ -35,7 +35,7 @@
                 <br>
             </fieldset>
 
-            <button type="submit">Enviar</button>
+            <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
         </form>
     </section>
 </body>
