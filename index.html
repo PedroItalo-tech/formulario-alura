@@ -35,6 +35,25 @@
                 <br>
             </fieldset>
 
+            <fieldset>
+                <legend>Perfil</legend>
+
+                <p>Gênero</p>
+                <input type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis. O "value" é para salvar o resultado-->
+                <label for="userGender">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro -->
+                <input type="radio" name="userGender" value="Masculino">
+                <label for="userGender">Masculino</label> 
+                <input type="radio" name="userGender" value="notInformed">
+                <label for="userGender">Prefiro não informar</label> 
+            </fieldset>
+
+
+
+
+
+
+
+
             <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
         </form>
     </section>
