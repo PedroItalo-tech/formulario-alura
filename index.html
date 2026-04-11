@@ -12,8 +12,8 @@
     <section>
         <form action="" method="get"> <!--O <fomr> indica que vai começar um formulário, o <action> define para onde os dados vão ser enviados ao clicar no botão e o <method> define como os dados vão ser enviados-->
             <fieldset> <!--Cria um "grupo", define bordas -->
-                <!-- Dados pessoais do site-->
 
+                <!-- Dados pessoais do site-->
                 <legend>Dados pessoais</legend> <!-- É o título do grupo -->
                 <label for="name">Nome</label> <!--É a etiqueta-->
                 <input id="name" type="text" name="userName" required> <!--É o campo de entrada-->
@@ -28,7 +28,7 @@
                 <input id="email" type="email" name="userEmail" required>
                 <br>
                 <label for="phoneNumber">Número de celular</label>
-                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9] {11}" placeholder="(DDD)números">
+                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11999998888">
                 <br>
                 <label for="image">Upload de fotos</label>
                 <input id="image" type="file" accept="image/*" name="userImage">
