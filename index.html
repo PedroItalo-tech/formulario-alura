@@ -12,8 +12,8 @@
     <section>
         <form action="" method="get"> <!--O <fomr> indica que vai começar um formulário, o <action> define para onde os dados vão ser enviados ao clicar no botão e o <method> define como os dados vão ser enviados-->
             <fieldset> <!--Cria um "grupo", define bordas -->
-                <!-- Dados pessoais do site-->
 
+                <!-- Dados pessoais do site-->
                 <legend>Dados pessoais</legend> <!-- É o título do grupo -->
                 <label for="name">Nome</label> <!--É a etiqueta-->
                 <input id="name" type="text" name="userName" required> <!--É o campo de entrada-->
@@ -28,7 +28,7 @@
                 <input id="email" type="email" name="userEmail" required>
                 <br>
                 <label for="phoneNumber">Número de celular</label>
-                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9] {11}" placeholder="(DDD)números">
+                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11999998888">
                 <br>
                 <label for="image">Upload de fotos</label>
                 <input id="image" type="file" accept="image/*" name="userImage">
@@ -133,6 +133,7 @@
             <fieldset>
                 <legend>Opiniões</legend>
 
+                <!--Experiência no site-->
                 <p>Nos diga como foi sua experiência no site!</p>
                 <input type="radio" id="otimo" name="userServiceOpnion"> <!--Para o "radio" funcionar, precisa sempre tem o mesmo "name"-->
                 <label for="otimo">Ótimo</label>
@@ -147,12 +148,30 @@
                 <label for="ruim">Ruim</label>
                 <br>
 
+                <!--Caixa de opniões-->
                 <label for="opnion">Deixe uma opnião: </label>
                 <textarea name="userOpnion" id="opnion" rows="5" cols="33" placeholder="Digite aqui..."></textarea> <!--A tag "textarea" cria um local para escrever.-->
                 <!--As tags "rows" e "cols" definem altura e largura inicais-->
             </fieldset>
 
+            <fieldset>
+                <legend>Confirmações</legend> 
+                
+                <!--Lei Geral de Proteção de Dados Pessoais-->
+                <input type="checkbox" name="userLgpd" id="userLgpdTerm" value="accepted" required> 
+                <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
+                <br>
+                <input type="checkbox" name="userGetResult" id="userResult" value="accepted"> 
+                <label for="userResult">Desejo receber o resultado por email</label>
+            </fieldset>
+
+
+
+
+
+
             <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
+            <button type="reset">Limpar formulário</button>
         </form>
     </section>
 </body>
