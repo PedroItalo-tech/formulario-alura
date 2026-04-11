@@ -130,9 +130,27 @@
                 <input type="color" name="userFavoriteColor" id="favoriteColor">
             </fieldset>
 
+            <fieldset>
+                <legend>Opiniões</legend>
 
+                <p>Nos diga como foi sua experiência no site!</p>
+                <input type="radio" id="otimo" name="userServiceOpnion"> <!--Para o "radio" funcionar, precisa sempre tem o mesmo "name"-->
+                <label for="otimo">Ótimo</label>
+                <br>
+                <input type="radio" id="boa" name="userServiceOpnion">
+                <label for="boa">Boa</label>
+                <br>
+                <input type="radio" id="regular" name="userServiceOpnion">
+                <label for="regular">Regular</label>
+                <br>
+                <input type="radio" id="ruim" name="userServiceOpnion">
+                <label for="ruim">Ruim</label>
+                <br>
 
-
+                <label for="opnion">Deixe uma opnião: </label>
+                <textarea name="userOpnion" id="opnion" rows="5" cols="33" placeholder="Digite aqui..."></textarea> <!--A tag "textarea" cria um local para escrever.-->
+                <!--As tags "rows" e "cols" definem altura e largura inicais-->
+            </fieldset>
 
             <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
         </form>
