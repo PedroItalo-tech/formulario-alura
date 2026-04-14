@@ -12,169 +12,172 @@
     <title>Formulário</title>
 </head>
 <body>
-    <header>
-        <img src="img/logo-culturama.png" alt="logo culturama">
-        <h1>Pesquisa Online</h1>
-    </header>
-    <section>
-        <form action="" method="get"> <!--O <fomr> indica que vai começar um formulário, o <action> define para onde os dados vão ser enviados ao clicar no botão e o <method> define como os dados vão ser enviados-->
-            <fieldset> <!--Cria um "grupo", define bordas -->
+    <main>
+        <header>
+            <img src="img/logo-culturama.png" alt="logo culturama">
+            <h1>Pesquisa de opnião</h1>
+        </header>
+        <section>
+            <form action="sucesso.html" method="get"> <!--O <fomr> indica que vai começar um formulário, o <action> define para onde os dados vão ser enviados ao clicar no botão e o <method> define como os dados vão ser enviados-->
+                <fieldset> <!--Cria um "grupo", define bordas -->
 
-                <!-- Dados pessoais do site-->
-                <legend>Dados pessoais</legend> <!-- É o título do grupo -->
-                <label for="name">Nome</label> <!--É a etiqueta-->
-                <input id="name" type="text" name="userName" required> <!--É o campo de entrada-->
-                <br>
-                <label for="age">Idade</label>
-                <input id="age" type="number" name="userAge" min="12" max="100" required> <!--O "required" torna o campo obrigatório-->
-                <br>
-                <label for="birthDate">Data de nascimento</label>
-                <input id="birthDate" type="date" name="userBirthDate">
-                <br>
-                <label for="email">Email</label>
-                <input id="email" type="email" name="userEmail" required>
-                <br>
-                <label for="phoneNumber">Número de celular</label>
-                <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11999998888">
-                <br>
-                <label for="image">Upload de fotos</label>
-                <input id="image" type="file" accept="image/*" name="userImage">
-                <br>
-            </fieldset>
+                    <!-- Dados pessoais do site-->
+                    <legend>Dados pessoais</legend> <!-- É o título do grupo -->
+                    <label for="name">Nome</label> <!--É a etiqueta-->
+                    <input id="name" type="text" name="userName" required> <!--É o campo de entrada-->
+                    <br>
+                    <label for="age">Idade</label>
+                    <input id="age" type="number" name="userAge" min="12" max="100" required> <!--O "required" torna o campo obrigatório-->
+                    <br>
+                    <label for="birthDate">Data de nascimento</label>
+                    <input id="birthDate" type="date" name="userBirthDate">
+                    <br>
+                    <label for="email">Email</label>
+                    <input id="email" type="email" name="userEmail" required>
+                    <br>
+                    <label for="phoneNumber">Número de celular</label>
+                    <input id="phoneNumber" type="tel" name="userPhoneNumber" pattern="[0-9]{11}" placeholder="11999998888">
+                    <br>
+                    <label for="image">Upload de fotos</label>
+                    <input id="image" type="file" accept="image/*" name="userImage">
+                    <br>
+                </fieldset>
 
-            <fieldset>
-                <legend>Perfil</legend>
+                <fieldset>
+                    <legend>Perfil</legend>
 
-                <!-- Gênero -->
-                <p>Gênero</p>
-                <input id="fem" type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis de escolha única. O "value" é para salvar o resultado-->
-                <label for="fem">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro-->
-                <input id="masc" type="radio" name="userGender" value="Masculino">
-                <label for="masc">Masculino</label> 
-                <input id="notInformed" type="radio" name="userGender" value="notInformed">
-                <label for="notInformed">Prefiro não informar</label> 
-                <br>
+                    <!-- Gênero -->
+                    <p>Gênero</p>
+                    <input id="fem" type="radio" name="userGender" value="Feminino"> <!-- O "radio" é para criar uma lista de opções selecionaveis de escolha única. O "value" é para salvar o resultado-->
+                    <label for="fem">Feminino</label>  <!-- Aqui a ordem muda o resultado, fazendo a bolinha vir primeiro-->
+                    <input id="masc" type="radio" name="userGender" value="Masculino">
+                    <label for="masc">Masculino</label> 
+                    <input id="notInformed" type="radio" name="userGender" value="notInformed">
+                    <label for="notInformed">Prefiro não informar</label> 
+                    <br>
 
-                <!-- Estado Civil -->
-                <label for="maritalStatus">Estado Civil:</label>
-                <select name="userMaritalStatus" id="maritalStatus"> <!--Cria uma lista suspensa-->
-                    <option value="notInformed">Selecione</option> <!--A tag "option" sempre é puxada pelo select-->
-                    <option value="casado">Casado</option>
-                    <option value="solteiro">Solteiro</option>
-                    <option value="divorciado">Divorciado</option>
-                    <option value="casado">União estável</option>
-                </select>
+                    <!-- Estado Civil -->
+                    <label for="maritalStatus">Estado Civil:</label>
+                    <select name="userMaritalStatus" id="maritalStatus"> <!--Cria uma lista suspensa-->
+                        <option value="notInformed">Selecione</option> <!--A tag "option" sempre é puxada pelo select-->
+                        <option value="casado">Casado</option>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="divorciado">Divorciado</option>
+                        <option value="casado">União estável</option>
+                    </select>
 
-                <!-- Estados -->
-                <label for="state">Estado: </label>
-                <select id="state" name="userState" required>
-                    <option value="notInformed">Selecione</option>
-                    <option value="acre">Acre</option>
-                    <option value="alagoas">Alagoas</option>
-                    <option value="amapa">Amapá</option>
-                    <option value="amazonas">Amazonas</option>
-                    <option value="bahia">Bahia</option>
-                    <option value="ceara">Ceará</option>
-                    <option value="distritoFederal">Distrito Federal</option>
-                    <option value="espiritoSanto">Espírito Santo</option>
-                    <option value="goias">Goiás</option>
-                    <option value="maranhao">Maranhão</option>
-                    <option value="matoGrosso">Mato Grosso</option>
-                    <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
-                    <option value="minasGerais">Minas Gerais</option>
-                    <option value="para">Pará</option>
-                    <option value="paraiba">Paraíba</option>
-                    <option value="parana">Paraná</option>
-                    <option value="pernambuco">Pernambuco</option>
-                    <option value="piaui">Piauí</option>
-                    <option value="rioDeJaneiro">Rio de Janeiro</option>
-                    <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
-                    <option value="rioGrandeDoSul">Rio Grande do Sul</option>
-                    <option value="rondonia">Rondônia</option>
-                    <option value="roraima">Roraima</option>
-                    <option value="santaCatarina">Santa Catarina</option>
-                    <option value="saoPaulo">São Paulo</option>
-                    <option value="sergipe">Sergipe</option>
-                    <option value="tocantins">Tocantins</option>
-                </select>
+                    <!-- Estados -->
+                    <label for="state">Estado: </label>
+                    <select id="state" name="userState" required>
+                        <option value="notInformed">Selecione</option>
+                        <option value="acre">Acre</option>
+                        <option value="alagoas">Alagoas</option>
+                        <option value="amapa">Amapá</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="ceara">Ceará</option>
+                        <option value="distritoFederal">Distrito Federal</option>
+                        <option value="espiritoSanto">Espírito Santo</option>
+                        <option value="goias">Goiás</option>
+                        <option value="maranhao">Maranhão</option>
+                        <option value="matoGrosso">Mato Grosso</option>
+                        <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                        <option value="minasGerais">Minas Gerais</option>
+                        <option value="para">Pará</option>
+                        <option value="paraiba">Paraíba</option>
+                        <option value="parana">Paraná</option>
+                        <option value="pernambuco">Pernambuco</option>
+                        <option value="piaui">Piauí</option>
+                        <option value="rioDeJaneiro">Rio de Janeiro</option>
+                        <option value="rioGrandeDoNorte">Rio Grande do Norte</option>
+                        <option value="rioGrandeDoSul">Rio Grande do Sul</option>
+                        <option value="rondonia">Rondônia</option>
+                        <option value="roraima">Roraima</option>
+                        <option value="santaCatarina">Santa Catarina</option>
+                        <option value="saoPaulo">São Paulo</option>
+                        <option value="sergipe">Sergipe</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
 
-                <!-- Cidade -->
-                <label for="city">Cidade: </label> <!--É a etiqueta-->
-                <input id="city" name="userCity" required> <!--É o campo de entrada-->
-            </fieldset>
+                    <!-- Cidade -->
+                    <label for="city">Cidade: </label> <!--É a etiqueta-->
+                    <input id="city" name="userCity" required> <!--É o campo de entrada-->
+                </fieldset>
 
-            <fieldset>
-                <legend>Hábitos</legend>
+                <fieldset>
+                    <legend>Hábitos</legend>
 
-                <!--Redes Sociais-->
-                <p>Redes Sociais</p>
-                <input id="Instagram" type="checkbox" name="socialMedia" value="instagram"> <!--O "checkbox" permite selecionar várias opções-->
-                <label for="Instagram">Instagram</label>
-                <br>  
-                <input id="Facebook" type="checkbox" name="socialMedia" value="facebook">
-                <label for="Facebook">Facebook</label>
-                <br>  
-                <input id="Linkedin" type="checkbox" name="socialMedia" value="linkedin">
-                <label for="Linkedin">Linkedin</label>
-                <br>  
-                <input id="X" type="checkbox" name="socialMedia" value="x">
-                <label for="X">X</label>
-                <br>
+                    <!--Redes Sociais-->
+                    <p>Redes Sociais</p>
+                    <input id="Instagram" type="checkbox" name="socialMedia" value="instagram"> <!--O "checkbox" permite selecionar várias opções-->
+                    <label for="Instagram">Instagram</label>
+                    <br>  
+                    <input id="Facebook" type="checkbox" name="socialMedia" value="facebook">
+                    <label for="Facebook">Facebook</label>
+                    <br>  
+                    <input id="Linkedin" type="checkbox" name="socialMedia" value="linkedin">
+                    <label for="Linkedin">Linkedin</label>
+                    <br>  
+                    <input id="X" type="checkbox" name="socialMedia" value="x">
+                    <label for="X">X</label>
+                    <br>
 
-                <!--Estilo de Música-->
-                <label for="musicStyle">Estilo musical:</label>
-                <input list="styleTypes" type="text" id="musicStyle" name="userMusicStyle">
-                <datalist id="styleTypes">
-                    <option value="Rock">
-                    <option value="Pop">
-                    <option value="Samba">
-                    <option value="Sertanejo">
-                </datalist>
-                <br>
+                    <!--Estilo de Música-->
+                    <label for="musicStyle">Estilo musical:</label>
+                    <input list="styleTypes" type="text" id="musicStyle" name="userMusicStyle">
+                    <datalist id="styleTypes">
+                        <option value="Rock">
+                        <option value="Pop">
+                        <option value="Samba">
+                        <option value="Sertanejo">
+                    </datalist>
+                    <br>
 
-                <!--Cor favorita-->
-                <label for="favoriteColor">Cor favorita</label>
-                <input type="color" name="userFavoriteColor" id="favoriteColor">
-            </fieldset>
+                    <!--Cor favorita-->
+                    <label for="favoriteColor">Cor favorita</label>
+                    <input type="color" name="userFavoriteColor" id="favoriteColor">
+                </fieldset>
 
-            <fieldset>
-                <legend>Opiniões</legend>
+                <fieldset>
+                    <legend>Opiniões</legend>
 
-                <!--Experiência no site-->
-                <p>Nos diga como foi sua experiência no site!</p>
-                <input type="radio" id="otimo" name="userServiceOpnion"> <!--Para o "radio" funcionar, precisa sempre tem o mesmo "name"-->
-                <label for="otimo">Ótimo</label>
-                <br>
-                <input type="radio" id="boa" name="userServiceOpnion">
-                <label for="boa">Boa</label>
-                <br>
-                <input type="radio" id="regular" name="userServiceOpnion">
-                <label for="regular">Regular</label>
-                <br>
-                <input type="radio" id="ruim" name="userServiceOpnion">
-                <label for="ruim">Ruim</label>
-                <br>
+                    <!--Experiência no site-->
+                    <p>Nos diga como foi sua experiência no site!</p>
+                    <input type="radio" id="otimo" name="userServiceOpnion"> <!--Para o "radio" funcionar, precisa sempre tem o mesmo "name"-->
+                    <label for="otimo">Ótimo</label>
+                    <br>
+                    <input type="radio" id="boa" name="userServiceOpnion">
+                    <label for="boa">Boa</label>
+                    <br>
+                    <input type="radio" id="regular" name="userServiceOpnion">
+                    <label for="regular">Regular</label>
+                    <br>
+                    <input type="radio" id="ruim" name="userServiceOpnion">
+                    <label for="ruim">Ruim</label>
+                    <br>
 
-                <!--Caixa de opniões-->
-                <label for="opnion">Deixe uma opnião: </label>
-                <textarea name="userOpnion" id="opnion" rows="5" cols="33" placeholder="Digite aqui..."></textarea> <!--A tag "textarea" cria um local para escrever.-->
-                <!--As tags "rows" e "cols" definem altura e largura inicais-->
-            </fieldset>
+                    <!--Caixa de opniões-->
+                    <label for="opnion">Deixe uma opnião: </label>
+                    <textarea name="userOpnion" id="opnion" rows="5" cols="33" placeholder="Digite aqui..."></textarea> <!--A tag "textarea" cria um local para escrever.-->
+                    <!--As tags "rows" e "cols" definem altura e largura inicais-->
+                </fieldset>
 
-            <fieldset>
-                <legend>Confirmações</legend> 
-                
-                <!--Lei Geral de Proteção de Dados Pessoais-->
-                <input type="checkbox" name="userLgpd" id="userLgpdTerm" value="accepted" required> 
-                <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
-                <br>
-                <input type="checkbox" name="userGetResult" id="userResult" value="accepted"> 
-                <label for="userResult">Desejo receber o resultado por email</label>
-            </fieldset>
+                <fieldset>
+                    <legend>Confirmações</legend> 
+                    
+                    <!--Lei Geral de Proteção de Dados Pessoais-->
+                    <input type="checkbox" name="userLgpd" id="userLgpdTerm" value="accepted" required> 
+                    <label for="userLgpdTerm">Eu aceito participar da pesquisa</label>
+                    <br>
+                    <input type="checkbox" name="userGetResult" id="userResult" value="accepted"> 
+                    <label for="userResult">Desejo receber o resultado por email</label>
+                </fieldset>
 
-            <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
-            <button type="reset">Limpar formulário</button>
-        </form>
-    </section>
+                <button type="submit">Enviar</button> <!--O type="submit" diz ao navegador: "Quando este botão for clicado, pegue todos os dados dentro do <form> e execute a ação definida no action"-->
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </main>
+
 </body>
 </html>
